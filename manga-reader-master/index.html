@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Manga Reader</title>
-
+    <title>Vu Manga Reader</title>
+    <link href="" rel="icon">
     <!-- css files -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
@@ -15,9 +15,7 @@
 <body>
     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow py-2 py-sm-0">
-        <a class="navbar-brand" href="#">
-            <h5>Manga Man</h5>
-        </a>
+            <a href="index.html"><h5>Manga Reader</h5></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="container-fluid">
                 <div class="row py-3">
@@ -25,25 +23,13 @@
                         <ul class="navbar-nav mr-auto">
                             <!-- always use single word for li -->
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">New</a>
+                                <a class="nav-link" href="#">Mới nhất</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Populer</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Browse
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                                <a class="nav-link" href="#">Hot</a>
                             </li>
                         </ul>
                     </div>
@@ -97,8 +83,8 @@
                 <i class="fa fa-user-circle fa-2x"></i><i class="fa fa-angle-down"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">My account</a>
-                    <a class="dropdown-item" href="#">logout</a>
+                    <a class="dropdown-item" href="../Authentication_Firebase (1)/signup.html">Tài khoản của tôi</a>
+                    <a class="dropdown-item" href="#">Thoát</a>
                 </div>
             </div>
         </div>
@@ -137,19 +123,19 @@
     <div class="lastest container mt-4 mt-sm-5">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="font-weight-bolder float-left">Lastest Manga Updates</h2>
+                <h2 class="font-weight-bolder float-left">Manga mới nhất</h2>
             </div>
             <div class="col-lg-6">
                 <ul class="calendar list-unstyled list-inline float-right font-weight-bold mt-3 mt-sm-0">
-                    <li class="list-inline-item active">Today</li>
-                    <li class="list-inline-item">Yesterday</li>
-                    <li class="list-inline-item">Sun</li>
-                    <li class="list-inline-item">Fri</li>
-                    <li class="list-inline-item">Thur</li>
-                    <li class="list-inline-item">Wed</li>
+                    <li class="list-inline-item active">Hôm nay</li>
+                    <li class="list-inline-item">Hôm qua</li>
+                    <li class="list-inline-item">Chủ nhật</li>
+                    <li class="list-inline-item">Thứ sáu</li>
+                    <li class="list-inline-item">Thứ năm</li>
+                    <li class="list-inline-item">Thứ tư</li>
                 </ul>
             </div>
-        </div>
+        </div>  
 
         <div class="posts row">
             <div class="col-lg-2 col-md-3 col-sm-4">
@@ -163,29 +149,29 @@
                             <table class="table table-borderless">
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Genre:</th>
-                                        <td>Sport</td>
+                                        <th scope="row">Thể loại:</th>
+                                        <td>Đánh nhau,Phiêu lưu</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Artist:</th>
-                                        <td>Jacob ZFCon</td>
+                                        <th scope="row">Tác giả:</th>
+                                        <td>Oda Eiichiro</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Update:</th>
-                                        <td>VOL. 125</td>
+                                        <th scope="row">Mới nhất:</th>
+                                        <td>chap. 5</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <p class="about text-muted">
-                            efficitur eu tortor. Nam et odio aliquet.
+                            Luffy đấm nhau và trở thành vua hải tặc
                         </p>
-                        <a class="reading btn" href="details.html">Start reading VOL. 1</a>
+                        <a class="reading btn" href="details.html">Đọc</a>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="details.html">One Piece</a></h5>
                         <p class="card-text">CH. 2</p>
-                        <p class="card-text"><small class="text-muted text-uppercase">Update 1 Hour ago</small></p>
+                        <p class="card-text"><small class="text-muted text-uppercase">Update Hour ago</small></p>
                     </div>
                 </div>
             </div>
@@ -196,8 +182,8 @@
     <!-- start footer -->
     <footer>
         <div class="container py-4">
-            <span class="copyright">&copy; 2019 ZFCon</span>
-            <span class="design float-right">Designed by ZFCon</span>
+            <span class="copyright">&copy; 2023 Pham Tuan Vu</span>
+            <span class="design float-right">Designed by Pham Tuan Vu</span>
         </div>
     </footer>
     <!-- end footer -->
