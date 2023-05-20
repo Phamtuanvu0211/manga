@@ -57,7 +57,7 @@ text-align: center;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin</title>
     <link href="../manga-reader-master/index.html">
-    <link href="" rel="icon">
+    <link href="../manga-reader-master/img/logo2.png" rel="icon">
 </head>
 <body>  
     <form id="signin" action="" method="POST" onsubmit="validate()">
@@ -65,15 +65,14 @@ text-align: center;
         <h1 style="display:flex ; justify-content: center;">Đăng nhập</h1>
         <p style="display:flex ; justify-content: center;">Vui lòng điền thông tin để đăng nhập</p>
         <hr>    
-        <label for="username"><b style="display:flex ; justify-content: center;">Tên đăng nhập</b></label>
+        <label for="username"><b style="display:flex ; justify-content: center;">Tên đăng nhập(dùng gmail)</b></label>
         <input type="text" placeholder="Họ và tên" name="username" id="username">
         <label for="password"><b style="display:flex ; justify-content: center;">Mật khẩu</b></label>
         <input type="password" placeholder="******" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Yêu cầu có chữ Hoa và thường và số,mật khẩu phải có ít nhất 8 chữ cái" required>
-        <label for="email">Nhập email của bạn:</label>
-        <input type="email" id="email" name="email" required style="border-radius: 50px; color: #fb5849;">
         <hr>
-        <button onclick="validate()"  class="submit" >Đăng nhập</button>
+        <button type="submit" class="submit" >Đăng nhập</button>
         <p style="display: flex; justify-content: center;">Bạn chưa có tài khoản ? <a href="signup.html">Đăng ký</a>.</p>
+        </div>
         </form>
         
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
