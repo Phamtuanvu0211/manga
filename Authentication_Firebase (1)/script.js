@@ -14,30 +14,26 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
- const userSignIn = (email, password) => {
-   firebase
-   .auth()
-   .signInWithEmailAndPassword(email, password)
+const userSignIn = (email, password) => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function() {
+      alert('Sign in successful');
+      window.location.href = 'file:///C:/Users/PC/Desktop/JSI%20SPCK/manga-reader-master/index.html';
+    })
+    .catch(function(error) {
+      alert(error.message)
+    })
+}
+
+ const userSignUp = (email, password) => {
+   firebase.auth().createUserWithEmailAndPassword(email, password)
      .then(function () {
-       alert('Sign in successful');
-       window.location.href = 'file:///C:/Users/PC/Desktop/JSI%20SPCK/manga-reader-master/index.html';
+       alert("Sign up successful!");
      })
      .catch(function (error) {
-       alert(error.message)
-     })
- }
-
-// const userSignUp = (email, password) => {
-//   firebase
-//     .auth()
-//     .createUserWithEmailAndPassword(email, password)
-//     .then(function () {
-//       alert("Sign up successful!");
-//     })
-//     .catch(function (error) {
-//       alert(error.message);
-//     });
-// };
+       alert(error.message);
+     });
+ };
 
 // Lớp (class) Form
 class Form {
@@ -123,42 +119,19 @@ const isPasswordMatched = (password, confirmPassword) => {
   return password === confirmPassword;
 };
 
- //Tạo form đăng ký
-//  const signupFields = [
-//    new Field("username", [(value) => isRequired(value)]),
-//    new Field("email", [(value) => isRequired(value), (value) => isEmail(value)]),
-//    new Field("password", [(value) => isRequired(value)]),
-//    new Field("confirm-password", [
-//      (value) => isRequired(value),
-//      (value) =>
-//        isPasswordMatched(value, document.getElementsByName("password")[0].value),
-//    ]),
-//  ];
+// Tạo form đăng nhập
+const loginFields = [
+  new Field("username", [(value) => isRequired(value)]),
+  new Field("password", [(value) => isRequired(value)]),
+];
 
-// const signupForm = new Form("signup", signupFields, (event) => {
-//    event.preventDefault();
-//    if (signupForm.isValid()) {
-//      const data = signupForm.getData();
-//      console.log(data);
-//      userSignUp(data.username, data.password);
-//      signupForm.clear();
-//    }
-//  });
-
- //Tạo form đăng nhập
- const signinFields = [
-   new Field("username", [(value) => isRequired(value)]),
-   new Field("password", [(value) => isRequired(value)]),
- ];
-
- const signinForm = new Form("signin", signinFields, (event) => {
-   event.preventDefault();
-   if (signinForm.isValid()) {
-     const data = signinForm.getData();
-     console.log(data);
-     userSignIn(data.username, data.password);
-     signinForm.clear();
-   }
- });
+const loginForm = new Form("login-form", loginFields, (event) => {
+  event.preventDefault();
+  if (loginForm.isValid()) {
+    const data = loginForm.getData();
+    userSignIn(data.username, data.password);
+    loginForm.clear();
+  }
+}); 
 
 
